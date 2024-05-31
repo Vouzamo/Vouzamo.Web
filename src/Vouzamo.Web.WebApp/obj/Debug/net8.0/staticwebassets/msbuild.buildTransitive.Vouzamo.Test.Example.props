@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Vouzamo.Test.Example.props" />
+</Project>

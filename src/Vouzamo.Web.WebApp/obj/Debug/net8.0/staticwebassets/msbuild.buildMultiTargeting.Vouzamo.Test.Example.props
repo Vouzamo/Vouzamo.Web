@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Vouzamo.Test.Example.props" />
+</Project>

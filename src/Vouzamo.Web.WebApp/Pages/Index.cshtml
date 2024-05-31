@@ -1,0 +1,19 @@
+﻿@page
+@using Elasticsearch.Net
+@using Nest
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+
+    var uri = new Uri("http://truenas:39200");
+    var pool = new SingleNodeConnectionPool(uri);
+    var settings = new ConnectionSettings(pool)
+        .BasicAuthentication("elastic", "Ch8rl0tt3");
+    var client = new ElasticClient(settings);
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Elasticsearch ping: @(client.Ping().DebugInformation)</p>
+</div>
