@@ -22,6 +22,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./src
-          file: ./src/Vouzamo.ScoreStream.WebApp/Dockerfile
+          file: ./src/Vouzamo.Web.WebApp/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/score-stream:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/web:latest
